@@ -1,0 +1,22 @@
+# Виртуальное окружение
+.venv/
+# Python кеш
+__pycache__/
+*.pyc
+
+# Переменные окружения
+.env*
+
+# Логи
+*.log
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# Alembic
+alembic.ini
+
+# Pytests
+.pytest_cache
