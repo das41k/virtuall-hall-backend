@@ -5,7 +5,6 @@ from sqlalchemy import ForeignKey
 from typing import Optional
 from datetime import datetime
 
-from .type_event import TypeEvent
 
 class Event(Base):
     __tablename__ = "events"
@@ -16,4 +15,4 @@ class Event(Base):
     eventAt: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     
     event_type_id: Mapped[int] = mapped_column(Integer, ForeignKey("types_events.id"), nullable=False)
-    type_event = Mapped[TypeEvent] = relationship("TypeEvent", back_populates="events")
+    type_event: Mapped["TypeEvent"] = relationship("TypeEvent", back_populates="events")
